@@ -399,6 +399,7 @@ body {
   line-height: 1.6;
   margin-left: 1rem;
   display: inline;
+  color: white;
 }
 
 .vector {
@@ -407,14 +408,29 @@ body {
   margin-top: -50px;
   display: inline-block;
   vertical-align: middle;
+
 }
 
 .vector-end {
   height: 45px;
   width: 80px;
-  margin-top: 15px;
   display: inline-block;
   vertical-align: middle;
+
+
+}
+
+.testimonial-section {
+  position: relative;
+  width: 100%;
+}
+
+.testimonial-overlay {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+  max-width: 600px;
 
 }
 
@@ -880,13 +896,15 @@ body {
     height: 300px;
 
   }
-  .app-buttons.on-card{
+
+  .app-buttons.on-card {
     position: absolute;
     left: 75px;
     bottom: 10px;
-    
+
   }
-   .app-buttons img {
+
+  .app-buttons img {
     height: 50px;
   }
 
@@ -933,6 +951,7 @@ body {
   }
 
 }
+
 /* ---------------------------------------------------------------------------------------1200------scroll enable  devices */
 
 @media (max-width: 1200px) {
@@ -1006,15 +1025,16 @@ body {
 
   }
 
-    .app-buttons.on-card{
+  .app-buttons.on-card {
     position: absolute;
     left: 200px;
     bottom: 150px;
     left: 50%;
-  transform: translateX(-50%);
-  display: flex;
+    transform: translateX(-50%);
+    display: flex;
   }
-   .app-buttons img {
+
+  .app-buttons img {
     height: 60px;
   }
 
@@ -1162,41 +1182,50 @@ body {
 
   .feature-card {
     width: 100%;
-    
+
   }
-.left-connector,
+
+  .left-connector,
   .right-connector {
     display: none;
   }
-  /*-------------------------- Testimonial -------------------------*/
+
+  /*-------------------------- Testimonial 992-------------------------*/
 
   .Testimonial {
-    /* background: url("/assets/opt_images/footerbgmob.webp"); */
     background-image: url("../../assets/opt_images/footerbgmob.webp");
-    min-height: auto;
+    height: 600;
     background-size: cover;
     background-position: center;
-    height: 1100px;
+    background-color: transparent;
+
   }
 
-  .testimonial-mobile {
-    position: absolute;
-    bottom: 0;
-    padding: 15px;
+  .Testimonial.product-img-box {
+
+    position: relative;
+    background-image: url("../../assets/opt_images/footerbg.webp");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
   }
 
-  .img-text {
-    font-size: 2rem;
-    line-height: 22px;
-  }
 
 
-  .vector {
-    width: 35px;
-  }
-
+  /* Start Quote */
+  .vector,
   .vector-end {
-    width: 35px;
+    width: 32px;
+  }
+
+
+  /* Main Text */
+  .img-text {
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 600;
+    max-width: 320px;
   }
 
   /* --------------------------Contact us------------------------- */
@@ -1212,7 +1241,7 @@ body {
 
   /*--------------------------- app-download-section---------------------- */
 
-   .download-card {
+  .download-card {
     background-image: url("../../assets/opt_images/frame2.webp");
     background-size: cover;
     background-position: center;
@@ -1223,18 +1252,18 @@ body {
 
   .app-buttons.on-card {
     position: absolute;
-    bottom: 150px; 
-  gap: 25px;
+    bottom: 150px;
+    gap: 25px;
 
   }
 
-  .app-buttons img{
+  .app-buttons img {
     height: 70px;
   }
 
 
- 
- 
+
+
 
   /* ------------------------------footer ----------------------------------*/
   .footer1 {
@@ -1422,6 +1451,7 @@ body {
     width: 60%;
 
   }
+
   .feature-head {
     font-size: 20px;
     line-height: 26px;
@@ -1447,34 +1477,32 @@ body {
 
   /* ------------------------------Testimonial ----------------------------*/
 
-  .testimonial-mobile {
-    position: absolute;
-    bottom: 0;
-    padding: 15px;
+
+  .Testimonial.product-img-box {
+
+    position: relative;
+    background-image: url("../../assets/opt_images/footerbg.webp");
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 450px;
   }
 
-  .vector {
-    /* height: 20px; */
-    /* width: 90px; */
-    margin-top: 0;
-    width: 35px;
-  }
 
+
+  /* Start Quote */
+  .vector,
   .vector-end {
-    /* height: 40px; */
-    margin-top: 100px;
-    margin-right: 55px;
-    width: 35px;
+    width: 32px;
   }
 
-  .img-text {
-    font-size: 32px;
-    line-height: 32px;
-    letter-spacing: 0.26px;
-    display: flex;
-    align-items: center;
-    padding: 5px;
 
+  /* Main Text */
+  .img-text {
+    font-size: 26px;
+    line-height: 30px;
+    font-weight: 600;
+    max-width: 320px;
   }
 
   /*---------------------------- contact us ---------------------------*/
@@ -1507,9 +1535,9 @@ body {
   .app-buttons.on-card {
     position: absolute;
     bottom: 110px;
- left: 50%;
-  transform: translateX(-50%);
-  display: flex;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
 
   }
 
@@ -1580,17 +1608,12 @@ body {
 
   /* ************||||||||||******||||||||||||**************************************************************** */
 
-  
+
 
   .row.d-flex.align-items-center {
     flex-direction: column;
     gap: 20px;
   }
-
-
-
-  
-
 
   .phone-left {
     transform: translate(20%, 10%);
@@ -1685,21 +1708,44 @@ body {
     margin-bottom: 20px;
   }
 
-  /* Testimonial */
+  /*-------- Testimonial--------- */
   .vector,
   .vector-end {
-    width: 25px;
+    width: 35px;
   }
 
-  .vector-end {
+  .testimonial-wrapper {
+    position: relative;
+    background-size: cover;
+    background-position: center bottom;
+    border-radius: 0;
+    top: 30%;
+  }
 
-    margin-top: 110px;
-    margin-right: 110px;
-
+  .Testimonial.product-img-box {
+    position: relative;
+    background-image: url("../../assets/opt_images/footerbgmob.webp");   
+    background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 800px;
   }
 
 
-  /* Contact us */
+  /* Bottom overlay */
+  .testimonial-overlay {
+   
+    left: 40%;
+    position: absolute;
+    text-align: left;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /*-------- Contact us -------------*/
   .formdata {
     padding: 30px;
   }
@@ -1713,14 +1759,14 @@ body {
   .app-buttons.on-card {
     /* flex-direction: column; */
     position: absolute;
-    bottom: 80px; 
-  left: 50%;
-  transform: translateX(-50%);
-  display: flex;
-  gap: 16px;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 16px;
   }
 
-  .app-buttons img{
+  .app-buttons img {
     height: 45px;
   }
 
@@ -1743,18 +1789,10 @@ body {
 
   /* *------*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*------------* */
 
-
-
-  
-
-
-
   .about {
     height: auto;
     min-height: 100vh;
   }
-
-
 
 
 }
@@ -1809,24 +1847,45 @@ body {
 
   /* Testimonial */
 
+  .Testimonial.product-img-box {
+    position: relative;
+    background-image: url("../../assets/opt_images/footerbgmob.webp");
+    height: auto;
+  }
+
+  .testimonial-wrapper {
+    height: 670px;
+  }
+
+  /* Bottom overlay */
+  .testimonial-overlay {
+    position: absolute;
+    text-align: left;
+    bottom: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-end;
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Start Quote */
   .vector,
   .vector-end {
-    width: 25px;
+    width: 28px;
   }
 
-  .vector-end {
 
-    margin-top: 110px;
-    margin-right: 110px;
-
-  }
-
+  /* Main Text */
   .img-text {
-    font-size: 26px;
-    line-height: 26px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    max-width: 280px;
   }
 
-  /* contact us */
+  /*------------------ contact us -----------*/
   .formdata {
     padding: 20px 15px;
   }
@@ -1838,11 +1897,11 @@ body {
 
   }
 
-   .app-buttons.on-card {
+  .app-buttons.on-card {
     position: absolute;
-    bottom: 70px; 
-  gap: 20px;
-    
+    bottom: 70px;
+    gap: 20px;
+
   }
 
   .app-buttons img {
@@ -1862,8 +1921,6 @@ body {
 
 
   /* -------******----------*************--------------- */
- 
-
 
 
   .about {
@@ -1893,22 +1950,48 @@ body {
 
 
   /* Testimonial */
+
+  .Testimonial.product-img-box {
+    position: relative;
+    /* background-image: none; */
+    background-image: url("../../assets/opt_images/footerbgmob.webp");
+
+    height: auto;
+  }
+
+
+  /* Bottom overlay */
+  .testimonial-overlay {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: flex-end;
+    gap: 8px;
+    text-align: left;
+    padding: 0 20px;
+    width: 100%;
+    justify-content: center;
+
+
+  }
+
+  /* Start Quote */
   .vector,
   .vector-end {
-    width: 25px;
+    width: 28px;
   }
 
-  .vector-end {
 
-    margin-top: 100px;
-    margin-right: 50px;
-
-  }
-
+  /* Main Text */
   .img-text {
-    font-size: 26px;
-    line-height: 26px;
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 600;
+    max-width: 280px;
   }
+
+
 
   /* app-download-section */
   .download-card {
@@ -1917,7 +2000,7 @@ body {
 
   .app-buttons.on-card {
     position: absolute;
-    bottom: 60px; 
+    bottom: 60px;
   }
 
   .app-buttons img {
