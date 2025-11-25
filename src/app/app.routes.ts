@@ -1,3 +1,20 @@
 import { Routes } from '@angular/router';
+import { Terms } from './layout/terms/terms';
+import { Privacypolicy } from './layout/privacypolicy/privacypolicy';
+import { Index } from './index'
+import { Main } from './layout/main/main';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+    {   path: '',
+        component: Main,
+        children: [
+      { path: '', component: Index },
+      { path: 'terms-condition', component: Terms },
+      { path: 'privacy-policy', component: Privacypolicy }
+    ]
+    },
+
+    
+
+    { path: '**', redirectTo: '' }
+];

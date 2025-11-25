@@ -1,0 +1,83 @@
+import { CommonModule } from '@angular/common';
+import { HttpClient } from '@angular/common/http';
+import { Component, HostListener } from '@angular/core';
+import { RouterOutlet,Router, RouterLink, NavigationEnd } from '@angular/router';
+
+@Component({
+  selector: 'app-main',
+  imports: [RouterOutlet,CommonModule,RouterLink],
+  standalone:true,
+  templateUrl: './main.html',
+  styleUrl: './main.css',
+})
+export class Main {
+  
+isScrolled = false;
+activeSection: string = '';
+isNavbarCollapsed = true;
+isNavbarOpen = false;
+
+
+  @HostListener('window:scroll', [])
+  onWindowScroll(): void {
+    this.isScrolled = window.scrollY > 800;
+  }
+
+constructor(private http:HttpClient,public router: Router){}
+toggleNavbar() {
+    this.isNavbarCollapsed = !this.isNavbarCollapsed;
+  }
+  
+ngAfterViewInit() {
+  const sections = document.querySelectorAll("section");
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        this.activeSection = entry.target.id;
+      }
+    });
+  }, {
+    threshold: 0.6 // 60% of section visible → active
+  });
+
+  sections.forEach(section => observer.observe(section));
+}
+
+ isContentPage() {
+    return (
+      this.router.url === '/terms-condition' ||
+      this.router.url === '/privacy-policy'
+    );
+  }
+
+  goToSection(sectionId: string) {
+  if (this.router.url === '/') {
+    // already on homepage → scroll
+    this.scrollToSection(sectionId);
+    this.isNavbarOpen = false;
+  } else {
+    // navigate to homepage → then scroll
+    this.router.navigate(['/']).then(() => {
+      setTimeout(() => {
+        this.scrollToSection(sectionId);
+      }, 50);
+    });
+  }
+}
+
+  // Scroll to a specific section
+  scrollToSection(sectionId: string): void {
+    this.activeSection = sectionId;
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+
+ngOnDestroy() {
+    this.isNavbarOpen = false;
+  }
+}
+
+
