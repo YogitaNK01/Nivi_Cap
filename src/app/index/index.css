@@ -61,7 +61,6 @@ body {
   display: flex;
   align-items: center;
   overflow: hidden;
-  /* background: url("/assets/opt_images/mainbg.jpg"); */
   background-image: url("../../assets/opt_images/mainbg.webp");
   background-size: cover;
   background-position: center;
@@ -578,7 +577,7 @@ body {
 }
 
 .download-img {
-  background-image: url("../../assets/images/appdownload.png");
+  background-image: url("../../assets/images/appdownload.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -983,7 +982,7 @@ body {
 
   /* IMAGE MOBILE */
   .download-img {
-    background-image: url("../../assets/images/appdownload.png");
+    background-image: url("../../assets/images/appdownload.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -1032,7 +1031,7 @@ body {
     margin: auto;
   }
   .download-img {
-    background-image: url("../../assets/images/appdownload.png");
+    background-image: url("../../assets/images/appdownload.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -1221,7 +1220,7 @@ body {
 
   /* IMAGE MOBILE */
   .download-img {
-    background-image: url("../../assets/images/appdownload.png");
+    background-image: url("../../assets/images/appdownload.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -1498,7 +1497,7 @@ body {
 
   /* IMAGE MOBILE */
   .download-img {
-    background-image: url("../../assets/images/appdownload.png");
+    background-image: url("../../assets/images/appdownload.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -1825,7 +1824,7 @@ body {
 
   /* IMAGE MOBILE */
   .download-img {
-    background-image: url("../../assets/images/appdownload.png");
+    background-image: url("../../assets/images/appdownload.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -2068,7 +2067,7 @@ body {
 
   /* Image floats above the blue card */
   .download-img1.mobile-img {
-    background-image: url("../../assets/images/appdownloadmob.png");
+    background-image: url("../../assets/images/appdownloadmob.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -2085,8 +2084,8 @@ body {
     text-align: center;
     position: absolute;
     left: 0;
-    z-index: 100;
-    top: 65px;
+    z-index: 8;
+    top: 50px;
   }
 
 
@@ -2179,7 +2178,7 @@ body {
 /* ---------------------------------------------------------------------------------------------Small Mobile (480px and below) */
 @media (max-width: 480px) {
   .common-container {
-    margin: 0 15px;
+    margin: 15px 15px;
   }
 
   .hero-content {
@@ -2280,7 +2279,7 @@ body {
 
   /* Image floats above the blue card */
   .download-img1.mobile-img {
-    background-image: url("../../assets/images/appdownloadmob.png");
+    background-image: url("../../assets/images/appdownloadmob.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -2297,8 +2296,8 @@ body {
     text-align: center;
     position: absolute;
     left: 0;
-    z-index: 100;
-    top: 65px;
+    z-index: 8;
+    top: 50px;
   
   }
 
@@ -2375,6 +2374,9 @@ body {
     height: auto;
   }
 
+    .common-container {
+        margin: 15px 15px;
+    }
 
 
   /* Testimonial */
@@ -2433,7 +2435,7 @@ body {
 
   /* Image floats above the blue card */
   .download-img1.mobile-img {
-    background-image: url("../../assets/images/appdownloadmob.png");
+    background-image: url("../../assets/images/appdownloadmob.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -2450,8 +2452,8 @@ body {
     text-align: center;
     position: absolute;
     left: 0;
-    z-index: 100;
-    top: 65px;
+    z-index: 8;
+    top: 50px;
   }
 
 
