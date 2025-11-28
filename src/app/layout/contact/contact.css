@@ -1,0 +1,147 @@
+.sectiontab {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.selected-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.selectedtab {
+  padding: 10px 30px;
+  border-radius: 100px;
+  background: #B3E4FD;
+}
+
+
+.form-control {
+  display: flex;
+  padding: 16px;
+  align-items: center;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
+}
+
+.formdata {
+  padding: 60px;
+  border-radius: var(--border-radius-border-radius-xl, 24px);
+  background: var(--system-background-bg, #FFF);
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.10);
+}
+
+.phone-wrapper {
+  border: 1.5px solid #c5c5c5;
+  border-radius: 6px;
+  padding: 0;
+  overflow: hidden;
+  background: #fff;
+}
+
+.country-box {
+  padding: 16px 14px;
+  border-right: 1.5px solid #c5c5c5;
+  gap: 6px;
+}
+
+.flag-icon {
+  width: 22px;
+  height: 16px;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.country-select {
+  border: none;
+  background: transparent;
+  font-size: 16px;
+  outline: none;
+  padding-right: 10px;
+}
+
+.country-select:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.mobile-input {
+  border: none !important;
+  flex: 1;
+  height: 48px;
+  font-size: 16px;
+}
+
+.mobile-input:focus {
+  box-shadow: none !important;
+}
+
+.submitbtn {
+  padding: 12px 18px;
+  width: 246px;
+}
+
+
+/* ----------responsive--------- */
+
+
+@media (max-width: 992px) {
+  .formdata {
+    padding: 40px;
+  }
+    .selectedtab-head-text{
+        font-size: 45;
+        line-height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+
+  .selectedtab-label {
+    font-size: 14px;
+    text-align: left;
+  }
+.nav-label {
+    font-size: 16px;
+}
+.text-common, .text-normal {
+        font-size: 14px;
+    }
+
+  .formdata {
+    padding: 30px 20px;
+  }
+
+  .feature-subtext {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  
+}
+
+
+@media (max-width: 576px) {
+      .selectedtab-head-text{
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+  .formdata {
+    padding: 30px ;
+  }
+}
+
+@media (max-width: 480px) {
+      .selectedtab-head-text{
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+  .formdata {
+    padding: 20px 15px;
+  }
+}
+ 

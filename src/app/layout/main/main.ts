@@ -2,6 +2,8 @@ import { CommonModule } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
 import { Component, HostListener } from '@angular/core';
 import { RouterOutlet,Router, RouterLink, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+
 
 @Component({
   selector: 'app-main',
@@ -18,12 +20,29 @@ isNavbarCollapsed = true;
 isNavbarOpen = false;
 
 
-  @HostListener('window:scroll', [])
-  onWindowScroll(): void {
-    this.isScrolled = window.scrollY > 800;
-  }
+  
+constructor(private http:HttpClient,public router: Router){
+    this.router.events
+  .pipe(filter(event => event instanceof NavigationEnd))
+  .subscribe(() => {
 
-constructor(private http:HttpClient,public router: Router){}
+    // If on home page → enable smooth scroll
+    if (this.router.url === '/') {
+      document.documentElement.style.scrollBehavior = 'smooth';
+    }
+
+    // Otherwise → disable smooth scroll
+    else {
+      document.documentElement.style.scrollBehavior = 'auto';
+    }
+
+    // Always open non-index pages at top instantly
+    if (this.router.url !== '/') {
+      window.scrollTo({ top: 0, behavior: 'auto' });
+    }
+  });
+
+}
 toggleNavbar() {
     this.isNavbarCollapsed = !this.isNavbarCollapsed;
   }

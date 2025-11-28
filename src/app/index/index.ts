@@ -2,11 +2,12 @@ import { CommonModule } from '@angular/common';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { Component, HostListener } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-index',
    standalone: true,
-  imports: [CommonModule,FormsModule,HttpClientModule],
+  imports: [CommonModule,FormsModule,HttpClientModule,RouterLink],
   templateUrl: './index.html',
   styleUrl: './index.css',
 })
@@ -16,12 +17,15 @@ activeSection: string = 'home';
 
   @HostListener('window:scroll', [])
   onWindowScroll(): void {
+     if (window.location.pathname !== '/') return; 
     this.isScrolled = window.scrollY > 800;
   }
 
 constructor(private http:HttpClient){}
 
 ngAfterViewInit() {
+   if (window.location.pathname !== '/') return; 
+
   const sections = document.querySelectorAll("section");
 
   const observer = new IntersectionObserver((entries) => {

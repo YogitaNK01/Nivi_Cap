@@ -577,7 +577,7 @@ body {
 }
 
 .download-img {
-  background-image: url("../../assets/images/appdownload.webp");
+  background-image: url("../../assets/opt_images/appdownload.webp");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: right bottom;
@@ -982,7 +982,7 @@ body {
 
   /* IMAGE MOBILE */
   .download-img {
-    background-image: url("../../assets/images/appdownload.webp");
+    background-image: url("../../assets/opt_images/appdownload.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -1031,7 +1031,7 @@ body {
     margin: auto;
   }
   .download-img {
-    background-image: url("../../assets/images/appdownload.webp");
+    background-image: url("../../assets/opt_images/appdownload.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -1220,7 +1220,7 @@ body {
 
   /* IMAGE MOBILE */
   .download-img {
-    background-image: url("../../assets/images/appdownload.webp");
+    background-image: url("../../assets/opt_images/appdownload.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -1497,7 +1497,7 @@ body {
 
   /* IMAGE MOBILE */
   .download-img {
-    background-image: url("../../assets/images/appdownload.webp");
+    background-image: url("../../assets/opt_images/appdownload.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -1824,7 +1824,7 @@ body {
 
   /* IMAGE MOBILE */
   .download-img {
-    background-image: url("../../assets/images/appdownload.webp");
+    background-image: url("../../assets/opt_images/appdownload.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: right bottom;
@@ -2067,7 +2067,7 @@ body {
 
   /* Image floats above the blue card */
   .download-img1.mobile-img {
-    background-image: url("../../assets/images/appdownloadmob.webp");
+    background-image: url("../../assets/opt_images/appdownloadmob.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -2279,7 +2279,7 @@ body {
 
   /* Image floats above the blue card */
   .download-img1.mobile-img {
-    background-image: url("../../assets/images/appdownloadmob.webp");
+    background-image: url("../../assets/opt_images/appdownloadmob.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
@@ -2435,7 +2435,7 @@ body {
 
   /* Image floats above the blue card */
   .download-img1.mobile-img {
-    background-image: url("../../assets/images/appdownloadmob.webp");
+    background-image: url("../../assets/opt_images/appdownloadmob.webp");
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;

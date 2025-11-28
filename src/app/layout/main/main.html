@@ -1,4 +1,4 @@
-<div class="container" *ngIf="router.url === '/terms-condition' || router.url === '/privacy-policy'">
+<div class="container" *ngIf="router.url === '/terms-condition' || router.url === '/privacy-policy' || router.url === '/contact'">
   <nav class="navbar navbar-expand-lg navbar-light bg-white  bottom-nav fixed-top">
     <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
       <div class="nav-logo d-flex align-items-center" routerLink="/">
@@ -30,8 +30,8 @@
             <li class="nav-item mx-2" [class.active]="activeSection === 'product'">
               <a class="nav-link nav-label" (click)="goToSection('product')">PRODUCT</a>
             </li>
-            <li class="nav-item mx-2" [class.active]="activeSection === 'contact'">
-              <a class="nav-link nav-label" (click)="goToSection('contact')">CONTACT</a>
+            <li class="nav-item mx-2" >
+              <a class="nav-link nav-label"  routerLink="/contact">CONTACT</a>
             </li>
 
           </ul>
@@ -51,7 +51,7 @@
 </div>
 
 <!-- Footer -->
-<footer class="footer-section py-5">
+<footer class="footer-section py-5  mt-5">
   <div class="common-container footermain">
     <div class="footer1">
       <div class="row footer-row1 d-flex flex-row">
@@ -98,7 +98,7 @@
               <li><a class="text-normal" (click)="goToSection('about')">ABOUT</a></li>
               <li><a class="text-normal" (click)="goToSection('features')">FEATURES</a></li>
               <li><a class="text-normal" (click)="goToSection('product')">PRODUCTS</a></li>
-              <li><a class="text-normal" (click)="goToSection('contact')">CONTACT US</a></li>
+              <li><a class="text-normal" routerLink="/contact" >CONTACT US</a></li>
             </ul>
           </div>
 

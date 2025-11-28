@@ -3,6 +3,7 @@ import { Terms } from './layout/terms/terms';
 import { Privacypolicy } from './layout/privacypolicy/privacypolicy';
 import { Index } from './index'
 import { Main } from './layout/main/main';
+import { Contact } from './layout/contact/contact';
 
 export const routes: Routes = [
     {   path: '',
@@ -10,7 +11,8 @@ export const routes: Routes = [
         children: [
       { path: '', component: Index },
       { path: 'terms-condition', component: Terms },
-      { path: 'privacy-policy', component: Privacypolicy }
+      { path: 'privacy-policy', component: Privacypolicy },
+       { path: 'contact', component: Contact }
     ]
     },
 

@@ -15,7 +15,7 @@ body {
 
 /* Smooth Scroll */
 html {
-  scroll-behavior: smooth;
+  /* scroll-behavior: auto; */
 }
 
 /* Slide down animation */
@@ -245,6 +245,7 @@ body {
 
 .page-content {
   min-height: calc(100vh - 85px);  
+  overflow: visible;
 }
 .content-margin {
   margin-top: 100px;
@@ -712,8 +713,9 @@ body {
   .right-bar {
     gap: 10px;
   }
-
-
+.fixed-top .container-fluid {
+    width: 100%;
+}
   /* ------------------------feature---------------- */
   .features-section-bg {
     background: linear-gradient(to bottom,

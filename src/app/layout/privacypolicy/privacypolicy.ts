@@ -8,6 +8,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class Privacypolicy implements OnInit {
 ngOnInit() {
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
 }
 }

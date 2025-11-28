@@ -1,0 +1,101 @@
+
+  <!-- Contact Section -->
+  <section id="contact" class="">
+    <div class="container py-md-5">
+      <div class="text-center mt-5 mb-3 mb-md-5 sectiontab">
+        <div class="selected-tab mt-5 d-flex align-items-center">
+          <div><h2 class=" selectedtab selectedtab-label">Contact Us</h2></div>
+
+
+          <h3 class="selectedtab-head-text">
+            Get in Touch for an Easy <span style="color: #F8192A;font-weight: 700;">Australia Journey!</span>
+          </h3>
+        </div>
+        <p class="text-common">
+          Don’t worry about finances, we’ve got your back. <br class="d-none d-sm-block">
+          You focus on experiencing, learning, and growing! </p>
+      </div>
+
+      <form #contactForm="ngForm" (ngSubmit)="submitForm(contactForm)" id="contactForm">
+
+        <div class="formdata">
+          <div class="row justify-content-center">
+
+            <div class="row g-4">
+              <div class=" col-md-6 col-sm-12 ">
+                <div class="nav-label">Full Name<sup>*</sup></div>
+
+                <input type="text" name="name" ngModel required pattern="^[A-Za-z ]+$"
+                  class="form-control form-control-lg feature-subtext" placeholder="Your Name" #name="ngModel">
+
+                <div class="text-danger mt-1" *ngIf="name.invalid && name.touched">
+                  <small *ngIf="name.errors?.['required']">Full name is required.</small>
+                  <small *ngIf="name.errors?.['pattern']">Only letters, numbers & spaces allowed.</small>
+                </div>
+              </div>
+
+              <div class="col-md-6 col-sm-12">
+                <div class="nav-label">Phone number<sup>*</sup></div>
+
+                <div class="phone-wrapper d-flex align-items-center">
+
+                  <!-- Country Selector -->
+                  <div class="country-box d-flex align-items-center">
+                    <img src="https://flagcdn.com/w20/in.webp" class="flag-icon" alt="flag">
+                    <select class="country-select">
+                      <option value="+91" class="text-normal">+91</option>
+
+                    </select>
+                  </div>
+
+                  <!-- Mobile Number Input -->
+                  <input type="number" name="phone" ngModel required pattern="^[0-9]{10}$"
+                    class="form-control mobile-input feature-subtext" placeholder="Enter Mobile number" #phone="ngModel">
+                </div>
+                <div class="text-danger mt-1" *ngIf="phone.invalid && phone.touched">
+                  <small *ngIf="phone.errors?.['required']">Phone number is required.</small>
+                  <small *ngIf="phone.errors?.['pattern']">Enter a valid 10-digit number.</small>
+                </div>
+              </div>
+
+              <div class="col-md-6 mt-4 col-sm-12">
+                <div class="nav-label">Email address<sup>*</sup></div>
+                <input type="email" name="email" ngModel required class="form-control form-control-lg feature-subtext"
+                  placeholder="Email Address" #email="ngModel">
+              </div>
+              <div class="col-md-6 mt-4 col-sm-12">
+                <div class="nav-label">Your query<sup>*</sup></div>
+                <input type="text" name="query" ngModel required class="form-control form-control-lg feature-subtext"
+                  placeholder="Enter your Query" #query="ngModel">
+                <div class="text-danger mt-1" *ngIf="query.invalid && query.touched">
+                  <small>Your query is required.</small>
+                </div>
+              </div>
+              <div class="col-12 mt-4 col-sm-12">
+                <div class="nav-label">Subject<sup>*</sup></div>
+                <input type="text" name="subject" ngModel class="form-control form-control-lg feature-subtext"
+                  placeholder="Add Subject" #subject="ngModel">
+                <div class="text-danger mt-1" *ngIf="subject.invalid && subject.touched">
+                  <small>Subject is required.</small>
+                </div>
+              </div>
+              <div class="col-12 mt-4 col-sm-12">
+                <div class="nav-label">Message<sup>*</sup></div>
+                <textarea name="message" ngModel required class="form-control form-control-lg feature-subtext" rows="5"
+                  placeholder="Tell us how we can help you. Please provide as much detail as possible."
+                  #message="ngModel"></textarea>
+                <div class="text-danger mt-1" *ngIf="message.invalid && message.touched">
+                  <small>Message is required.</small>
+                </div>
+              </div>
+              <div class="col-12 col-sm-12 text-center mt-5">
+                <button type="submit" class="btn btn-danger btn-lg submitbtn" [disabled]="contactForm.invalid">Submit
+                  Inquiry</button>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </section>
