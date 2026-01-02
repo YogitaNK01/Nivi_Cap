@@ -4,6 +4,7 @@ import { Privacypolicy } from './layout/privacypolicy/privacypolicy';
 import { Index } from './index'
 import { Main } from './layout/main/main';
 import { Contact } from './layout/contact/contact';
+import { News } from './layout/news/news';
 
 export const routes: Routes = [
     {   path: '',
@@ -12,7 +13,8 @@ export const routes: Routes = [
       { path: '', component: Index },
       { path: 'terms-condition', component: Terms },
       { path: 'privacy-policy', component: Privacypolicy },
-       { path: 'contact', component: Contact }
+       { path: 'contact', component: Contact },
+       { path: 'news', component: News }
     ]
     },
 

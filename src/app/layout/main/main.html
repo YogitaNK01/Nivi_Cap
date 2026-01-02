@@ -1,4 +1,4 @@
-<div class="container" *ngIf="router.url === '/terms-condition' || router.url === '/privacy-policy' || router.url === '/contact'">
+<div class="container" *ngIf="router.url === '/terms-condition' || router.url === '/privacy-policy' || router.url === '/contact' || router.url === '/news'">
   <nav class="navbar navbar-expand-lg navbar-light bg-white  bottom-nav fixed-top">
     <div class="container-fluid d-flex justify-content-between align-items-center flex-wrap">
       <div class="nav-logo d-flex align-items-center" routerLink="/">
@@ -31,15 +31,16 @@
               <a class="nav-link nav-label" (click)="goToSection('product')">PRODUCT</a>
             </li>
             <li class="nav-item mx-2" >
+              <a class="nav-link nav-label"  routerLink="/news">NEWS & MEDIA</a>
+            </li>
+            <li class="nav-item mx-2" >
               <a class="nav-link nav-label"  routerLink="/contact">CONTACT</a>
             </li>
 
           </ul>
-          <div class="btn d-none d-lg-block d-flex justify-content-end p-0">
-
+          <!-- <div class="btn d-none d-lg-block d-flex justify-content-end p-0">
             <a href="#" class="btn btn-danger px-4 py-2">Download APP</a>
-
-          </div>
+          </div> -->
         </div>
       </div>
     </div>
@@ -98,6 +99,7 @@
               <li><a class="text-normal" (click)="goToSection('about')">ABOUT</a></li>
               <li><a class="text-normal" (click)="goToSection('features')">FEATURES</a></li>
               <li><a class="text-normal" (click)="goToSection('product')">PRODUCTS</a></li>
+               <li><a class="text-normal" routerLink="/news" >NEWS & MEDIA</a></li>
               <li><a class="text-normal" routerLink="/contact" >CONTACT US</a></li>
             </ul>
           </div>

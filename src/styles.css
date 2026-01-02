@@ -104,8 +104,17 @@
   line-height: 24px;
   letter-spacing: 0.18px;
 }
+.loanhead {
+  color:  #0D4472;
+font-size:  30px;
+font-weight: 700;
+line-height: 36px; /* 120% */
+letter-spacing: 0.3px;
+}
 
-
+p{
+  margin-bottom: 0;
+}
 
 .common-container {
   margin: 0 160px 0 160px;

@@ -1,0 +1,55 @@
+<div class="container position-relative">
+
+    <div class="row">
+
+        <!-- Section Text -->
+        <div class="col-lg-12 d-flex align-items-center order-first order-lg-last mb-md-5 mb-sm-3 px-4 px-md-1">
+            <div class="w-100">
+
+                <div class="text-center selected-tab  align-items-center d-flex flex-column gap-3">
+                    <h3 class="selectedtab-head-text">
+                        News & <span style="color: #F8192A;font-weight: 700;">Media</span>
+                    </h3>
+
+                </div>
+
+
+                <div class="news-list">
+                    <div class="news-item" *ngFor="let item of pagedNews" (click)="openNews(item.URL)">
+                        <div class="news-title_">
+                            <h4 class="news-title feature-head">{{ item.Link }}</h4>
+
+                        </div>
+                      
+                        <div class="w-100 d-flex justify-content-between">
+                            <!-- <div class="news-source feature-subtext">{{ item.SrNo }}--{{ item.Publication }}</div> -->
+                              <div class="news-source feature-subtext">{{ item.Publication }}</div>
+                            <div class="date feature-subtext">Posted at: {{ item.Date }}</div>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="pagination-container" *ngIf="totalPages > 1">
+                    <button class="pg-btn arrow" (click)="previousPage()" [disabled]="currentPage === 1">
+                        ‹
+                    </button>
+
+                    <ng-container *ngFor="let page of visiblePages">
+                        <button class="pg-btn" [class.active]="page === currentPage" (click)="goToPage(page)">
+                            {{ page }}
+                        </button>
+                    </ng-container>
+
+                    <button class="pg-btn arrow" (click)="nextPage()" [disabled]="currentPage === totalPages">
+                        ›
+                    </button>
+                </div>
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
